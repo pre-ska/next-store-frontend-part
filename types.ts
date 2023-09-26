@@ -45,3 +45,19 @@ export interface ContainerProps {
 export interface MainNavProps {
   data: Category[];
 }
+
+export interface BillboardProps {
+  data: Billboard;
+}
+
+export interface Query {
+  categoryId?: string;
+  colorId?: string;
+  sizeId?: string;
+  isFeatured?: boolean;
+}
+
+export interface ProductListProps {
+  title: string;
+  items: Product[];
+}
