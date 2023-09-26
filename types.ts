@@ -105,3 +105,14 @@ export interface CategoryPageProps {
     sizeId: string;
   };
 }
+
+export interface FilterProps {
+  data: (Size | Color)[];
+  name: string;
+  valueKey: string;
+}
+
+export interface MobileFiltersProps {
+  sizes: Size[];
+  colors: Color[];
+}
