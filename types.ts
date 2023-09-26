@@ -77,3 +77,17 @@ export interface IconButtonProps {
   icon: React.ReactElement;
   className?: string;
 }
+
+export interface ProductPageProps {
+  params: {
+    productId: string;
+  };
+}
+
+export interface GalleryProps {
+  images: Image[];
+}
+
+export interface GalleryTabProps {
+  image: Image;
+}
