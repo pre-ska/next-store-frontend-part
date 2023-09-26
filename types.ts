@@ -122,3 +122,10 @@ export interface ModalProps {
   onClose: () => void;
   children: React.ReactNode;
 }
+
+export interface CartStore {
+  items: Product[];
+  addItem: (data: Product) => void;
+  removeItem: (id: string) => void;
+  removeAll: () => void;
+}
