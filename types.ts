@@ -91,3 +91,17 @@ export interface GalleryProps {
 export interface GalleryTabProps {
   image: Image;
 }
+
+export interface InfoProps {
+  data: Product;
+}
+
+export interface CategoryPageProps {
+  params: {
+    categoryId: string;
+  };
+  searchParams: {
+    colorId: string;
+    sizeId: string;
+  };
+}
