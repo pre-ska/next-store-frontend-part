@@ -116,3 +116,9 @@ export interface MobileFiltersProps {
   sizes: Size[];
   colors: Color[];
 }
+
+export interface ModalProps {
+  open: boolean;
+  onClose: () => void;
+  children: React.ReactNode;
+}
