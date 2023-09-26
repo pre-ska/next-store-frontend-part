@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export interface Product {
   id: string;
   category: Category;
@@ -60,4 +62,18 @@ export interface Query {
 export interface ProductListProps {
   title: string;
   items: Product[];
+}
+
+export interface ProductCard {
+  data: Product;
+}
+
+export interface CurrencyProps {
+  value?: string | number;
+}
+
+export interface IconButtonProps {
+  onClick?: MouseEventHandler<HTMLButtonElement> | undefined;
+  icon: React.ReactElement;
+  className?: string;
 }
