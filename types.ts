@@ -129,3 +129,11 @@ export interface CartStore {
   removeItem: (id: string) => void;
   removeAll: () => void;
 }
+
+export interface CartItemProps {
+  data: Product;
+}
+
+export interface CartItemInfoProps {
+  product: Record<string, any>;
+}
