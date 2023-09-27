@@ -13,15 +13,22 @@ const Summary = () => {
   const items = useCart((state) => state.items);
   const removeAll = useCart((state) => state.removeAll);
 
+  // ! ovo je response sa admin API endpointa nakon stripe-a
+  // ! admin će nakon plaćanja na stripeu hitat ovu rutu na frontendu "/cart"
+  // ! ako u paramsima ima success=1 onda je uspesno placanje -> "/cart?success=1"
   useEffect(() => {
     if (searchParams.get("success")) {
       toast.success("Payment completed.");
       removeAll();
     }
 
+    // ! ako u paramsima ima canceled=1 onda je uspesno onda je ...fail!!!  -> "/cart?canceled=1"
     if (searchParams.get("canceled")) {
       toast.error("Something went wrong.");
     }
+
+    // ! ovo baš i nije sigurno
+    // ! svako može otvoriti ovu rutu i triggat logiku....al samo je toast u pitanju i clear cart
   }, [searchParams, removeAll]);
 
   const totalPrice = items.reduce((total, item) => {
